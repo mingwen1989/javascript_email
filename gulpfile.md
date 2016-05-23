@@ -1,6 +1,7 @@
-ENVIRONMENT VARIABLE (PRODUCTION/DEVELOPMENT BUILD)
+### ENVIRONMENT VARIABLE (PRODUCTION/DEVELOPMENT BUILD)
+
 var utilities = require('gulp-util');
-$ npm install gulp-util --save-dev
+   $ npm install gulp-util --save-dev
 
   gulp.task("build", ['clean'], function(){
     if (buildProduction) {
@@ -10,17 +11,20 @@ $ npm install gulp-util --save-dev
     }
   });
 
-GULP
+### GULP
+
 var gulp = require('gulp');
 $ npm install gulp --save-dev
 $ npm install gulp -g
 
-BROWSERIFY
+### BROWSERIFY
+
 var browserify = require('browserify');
 $ npm install browserify --save-dev
 $ npm install browserify -g
 
-BROWSERIFY CODE INTO NEW FILE
+### BROWSERIFY CODE INTO NEW FILE
+
 var source = require('vinyl-source-stream');
 $ npm install vinyl-source-stream --save-dev
 
@@ -32,7 +36,8 @@ $ npm install vinyl-source-stream --save-dev
   });
 
 
-MINIFI
+### MINIFI
+
 var uglify = require('gulp-uglify');
 $ npm install gulp-uglify --save-dev
 
@@ -42,7 +47,8 @@ $ npm install gulp-uglify --save-dev
     .pipe(gulp.dest("./build/js"));
   });
 
-DELETE BETWEEN RUNS
+### DELETE BETWEEN RUNS
+
 var del = require('del');
 $ npm install gulp-util --save-dev
 
@@ -50,7 +56,8 @@ $ npm install gulp-util --save-dev
     return del(['build', 'tmp']);
   });
 
-CONCAT FILES
+### CONCAT FILES
+
 var concat = require('gulp-concat');
 $ npm install gulp-concat --save-dev
 
@@ -60,7 +67,8 @@ gulp.task('concatInterface', function() {
     .pipe(gulp.dest('./tmp'));
   });
 
-LINT
+### LINT
+
 var jshint = require('gulp-jshint');
 $ npm install jshint --save-dev
 $ npm install gulp-jshint --save-dev
@@ -72,5 +80,6 @@ $ npm install gulp-jshint --save-dev
   });
 /*
 
-PRODUCTION ENVIRONMENT
+### PRODUCTION ENVIRONMENT
+
 var buildProduction = utilities.env.production;
